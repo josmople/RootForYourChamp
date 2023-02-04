@@ -10,6 +10,7 @@ public class ManagerCalibrate : MonoBehaviour {
     public Settings Settings;
     public UI::Image Volume;
     public TMP::TMP_Text StateText;
+    public AudioDetection audioDetector;
 
     private int _calibrateStateIdx = 0;
     private Inputs _inputs;
@@ -50,15 +51,14 @@ public class ManagerCalibrate : MonoBehaviour {
         }
     }
 
-    private float GetVolumePercent () {
-        if (_inputs._.Low.ReadValue<float>() != 0f) {
-            return 20f;
-        } else if (_inputs._.Medium.ReadValue<float>() != 0f) {
-            return 50f;
-        } else if (_inputs._.High.ReadValue<float>() != 0f) {
-            return 80f;
-        }
+    public float volumeSmoothing = 0.1f;
+    public float volumeCached = 0;
+    public float volumeMultiplier = 100;
+    public float volumeExpAdjustmennt = 1.2f;
 
-        return 0.0f;
+    private float GetVolumePercent () {
+        var target = Mathf.Pow(audioDetector.FindVolume(), volumeExpAdjustmennt) * volumeMultiplier;
+        volumeCached = Mathf.Lerp(volumeCached, target, volumeSmoothing);
+        return Mathf.Clamp(volumeCached, 0, 100);
     }
 }

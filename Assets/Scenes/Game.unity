@@ -167,6 +167,7 @@ GameObject:
   - component: {fileID: 379443861}
   - component: {fileID: 379443860}
   - component: {fileID: 379443862}
+  - component: {fileID: 379443863}
   m_Layer: 0
   m_Name: Input
   m_TagString: Untagged
@@ -233,6 +234,19 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+--- !u!114 &379443863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379443858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ed80db4eef7245c786161211a8160cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sampleWindow: 64
 --- !u!1 &480073790
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,7 +513,6 @@ GameObject:
   m_Component:
   - component: {fileID: 902787420}
   - component: {fileID: 902787421}
-  - component: {fileID: 902787422}
   m_Layer: 0
   m_Name: Game
   m_TagString: Untagged
@@ -539,24 +552,11 @@ MonoBehaviour:
   Volume: {fileID: 661896869}
   Health: {fileID: 834985472}
   StateText: {fileID: 1232455434}
-  audioDetector: {fileID: 902787422}
-  volumeSmoothing: 0.1
+  audioDetector: {fileID: 379443863}
+  volumeSmoothing: 0.01
   volumeCached: 100
-  volumeMultiplier: 100
-  volumeExpAdjustmennt: 1.2
---- !u!114 &902787422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 902787419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ed80db4eef7245c786161211a8160cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sampleWindow: 64
+  volumeMultiplier: 15
+  volumeExpAdjustmennt: 1.05
 --- !u!1 &986428813
 GameObject:
   m_ObjectHideFlags: 0

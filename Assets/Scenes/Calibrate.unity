@@ -167,6 +167,7 @@ GameObject:
   - component: {fileID: 379443861}
   - component: {fileID: 379443860}
   - component: {fileID: 379443862}
+  - component: {fileID: 379443863}
   m_Layer: 0
   m_Name: Input
   m_TagString: Untagged
@@ -222,8 +223,8 @@ MonoBehaviour:
   m_ActionsAsset: {fileID: -944628639613478452, guid: 21fad521af5118b4a8aaeccb4520082c, type: 3}
   m_PointAction: {fileID: 0}
   m_MoveAction: {fileID: 0}
-  m_SubmitAction: {fileID: 1182247425570175342, guid: 21fad521af5118b4a8aaeccb4520082c, type: 3}
-  m_CancelAction: {fileID: 7374396913262615498, guid: 21fad521af5118b4a8aaeccb4520082c, type: 3}
+  m_SubmitAction: {fileID: 0}
+  m_CancelAction: {fileID: 0}
   m_LeftClickAction: {fileID: 0}
   m_MiddleClickAction: {fileID: 0}
   m_RightClickAction: {fileID: 0}
@@ -233,6 +234,19 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+--- !u!114 &379443863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379443858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ed80db4eef7245c786161211a8160cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sampleWindow: 64
 --- !u!1 &480073790
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +475,11 @@ MonoBehaviour:
   Settings: {fileID: 11400000, guid: af6edce220147c041a633fd5a0a8f973, type: 2}
   Volume: {fileID: 661896869}
   StateText: {fileID: 1232455434}
+  audioDetector: {fileID: 379443863}
+  volumeSmoothing: 0.01
+  volumeCached: 0
+  volumeMultiplier: 15
+  volumeExpAdjustmennt: 1.05
 --- !u!1 &986428813
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,8 +624,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: State
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d7055530746c2a4418801bac2cd9feca, type: 2}
+  m_sharedMaterial: {fileID: 3515597463900566630, guid: d7055530746c2a4418801bac2cd9feca, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
