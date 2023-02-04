@@ -540,6 +540,8 @@ MonoBehaviour:
   Health: {fileID: 834985472}
   StateText: {fileID: 1232455434}
   audioDetector: {fileID: 902787422}
+  volumeSmoothing: 0.4
+  volumeCached: 100
 --- !u!114 &902787422
 MonoBehaviour:
   m_ObjectHideFlags: 0

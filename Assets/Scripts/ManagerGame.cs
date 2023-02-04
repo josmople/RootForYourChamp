@@ -73,6 +73,10 @@ public class ManagerGame : MonoBehaviour {
         // Play animation
     }
 
+
+    public float volumeSmoothing = 0.1f;
+    public float volumeCached = 0;
+
     private float GetVolumePercent () {
         //if (_inputs._.Low.ReadValue<float>() != 0f) {
         //    return 20f;
@@ -81,7 +85,8 @@ public class ManagerGame : MonoBehaviour {
         //} else if (_inputs._.High.ReadValue<float>() != 0f) {
         //    return 80f;
         //}
-
-        return audioDetector.FindVolume() * 100;
+        var target = audioDetector.FindVolume() * 100;
+        volumeCached = Mathf.Lerp(volumeCached, target, volumeSmoothing);
+        return volumeCached;
     }
 }
