@@ -5,7 +5,7 @@ using System.Linq;
 
 public class AudioDetection : MonoBehaviour
 {
-    public int sampleWindow;
+    public int sampleWindow = 64;
     private AudioClip micClip;
 
     // Start is called before the first frame update
@@ -140,5 +140,12 @@ public class AudioDetection : MonoBehaviour
         }
 
         return freqs;
+    }
+
+
+    public float FindVolume()
+    {
+        var sum = GetAudioWaveFromMic().Select(x => x * x).Sum();
+        return Mathf.Sqrt(sum);
     }
 }

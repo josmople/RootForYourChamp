@@ -11,6 +11,8 @@ public class ManagerGame : MonoBehaviour {
     public UI::Image Health;
     public TMP::TMP_Text StateText;
 
+    public AudioDetection audioDetector;
+
     private Game _currentGame;
     private int _currentStateIdx;
     private Inputs _inputs;
@@ -72,14 +74,14 @@ public class ManagerGame : MonoBehaviour {
     }
 
     private float GetVolumePercent () {
-        if (_inputs._.Low.ReadValue<float>() != 0f) {
-            return 20f;
-        } else if (_inputs._.Medium.ReadValue<float>() != 0f) {
-            return 50f;
-        } else if (_inputs._.High.ReadValue<float>() != 0f) {
-            return 80f;
-        }
+        //if (_inputs._.Low.ReadValue<float>() != 0f) {
+        //    return 20f;
+        //} else if (_inputs._.Medium.ReadValue<float>() != 0f) {
+        //    return 50f;
+        //} else if (_inputs._.High.ReadValue<float>() != 0f) {
+        //    return 80f;
+        //}
 
-        return 0.0f;
+        return audioDetector.FindVolume();
     }
 }
