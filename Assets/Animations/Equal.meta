@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 <<<<<<<< HEAD:Assets/Animations.meta
 guid: 9d59e5d8019084e508490d06e7aee6df
 ========
 guid: 86ca5d3f3e122e348bf4eb8ad98baa94
 >>>>>>>> main:Assets/Animations/Equal.meta
 folderAsset: yes
-=======
-<<<<<<<< HEAD:Assets/Scenes/_Test_Jom.unity.meta
-guid: 2ccbf573dade3ac409120dcd3a9d663f
-========
-guid: db0f941c00f8f774e8201cacf177cda3
-folderAsset: yes
->>>>>>>> main:Assets/Animations.meta
->>>>>>> main
 DefaultImporter:
   externalObjects: {}
   userData: 
