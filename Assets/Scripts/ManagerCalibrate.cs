@@ -10,6 +10,7 @@ public class ManagerCalibrate : MonoBehaviour {
     public Settings Settings;
     public UI::Image Volume;
     public TMP::TMP_Text StateText;
+    public Animator Animator;
     public AudioDetection audioDetector;
 
     private int _calibrateStateIdx = 0;
@@ -47,7 +48,9 @@ public class ManagerCalibrate : MonoBehaviour {
         }
 
         if (_calibrateStateIdx < Settings.States.Count) {
-            StateText.text = Settings.States[_calibrateStateIdx].Text;
+            var state = Settings.States[_calibrateStateIdx];
+            StateText.text = state.Text;
+            Animator.Play(state.Text);
         }
     }
 
