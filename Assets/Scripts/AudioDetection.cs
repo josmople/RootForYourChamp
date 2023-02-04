@@ -104,12 +104,6 @@ public class AudioDetection : MonoBehaviour
 
         clip.GetData(waveData, clipSample);
 
-        float totalLoudness = 0;
-
-        for(int i = 0; i < waveData.Length; i++)
-        {
-            totalLoudness += Mathf.Abs(waveData[i]);
-        }
         float[] absWaveData = new float[waveData.Length];
         for(int i = 0; i < waveData.Length; i++)
             absWaveData[i] = Mathf.Abs(waveData[i]);
