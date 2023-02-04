@@ -79,9 +79,9 @@ MonoBehaviour:
       Entry: 8
       Data: 
   LengthSecs: 10
-  PollingIntervalSecs: 0.1
+  PollingIntervalSecs: 0.01
   AccurateGainPercent: 1
   TolerancePercent: 10
-  InaccurateCostPercent: 1
+  InaccurateCostPercent: 0.1
   StartingHealthPercent: 50
   StartingIdx: 2
