@@ -542,6 +542,7 @@ MonoBehaviour:
   audioDetector: {fileID: 902787422}
   volumeSmoothing: 0.4
   volumeCached: 100
+  volumeMultiplier: 50
 --- !u!114 &902787422
 MonoBehaviour:
   m_ObjectHideFlags: 0
