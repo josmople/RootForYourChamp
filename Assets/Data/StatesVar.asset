@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 401df441deefa9e4d8378bcb436a0c53, type: 3}
+  m_Name: StatesVar
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: value
+      Entry: 7
+      Data: 0|States, Assembly-CSharp
+    - Name: StartingIdx
+      Entry: 3
+      Data: 0
+    - Name: StateTargetVolumes
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[System.ValueTuple`2[[State, Assembly-CSharp],[System.Single,
+        mscorlib]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 5
+    - Name: 
+      Entry: 7
+      Data: System.ValueTuple`2[[State, Assembly-CSharp],[System.Single, mscorlib]],
+        mscorlib
+    - Name: Item1
+      Entry: 7
+      Data: 2|EndState, Assembly-CSharp
+    - Name: Text
+      Entry: 1
+      Data: Lost!
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Item2
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: System.ValueTuple`2[[State, Assembly-CSharp],[System.Single, mscorlib]],
+        mscorlib
+    - Name: Item1
+      Entry: 7
+      Data: 3|FightingState, Assembly-CSharp
+    - Name: Text
+      Entry: 1
+      Data: Losing
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Item2
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: System.ValueTuple`2[[State, Assembly-CSharp],[System.Single, mscorlib]],
+        mscorlib
+    - Name: Item1
+      Entry: 7
+      Data: 4|FightingState, Assembly-CSharp
+    - Name: Text
+      Entry: 1
+      Data: OK
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Item2
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: System.ValueTuple`2[[State, Assembly-CSharp],[System.Single, mscorlib]],
+        mscorlib
+    - Name: Item1
+      Entry: 7
+      Data: 5|FightingState, Assembly-CSharp
+    - Name: Text
+      Entry: 1
+      Data: Winning
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Item2
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: System.ValueTuple`2[[State, Assembly-CSharp],[System.Single, mscorlib]],
+        mscorlib
+    - Name: Item1
+      Entry: 7
+      Data: 6|EndState, Assembly-CSharp
+    - Name: Text
+      Entry: 1
+      Data: Won!
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Item2
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: initialValue
+      Entry: 6
+      Data: 

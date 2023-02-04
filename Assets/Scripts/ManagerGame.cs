@@ -6,22 +6,20 @@ using UI = UnityEngine.UI;
 
 public class ManagerGame : MonoBehaviour {
     public Settings Settings;
-    public States States;
+    public StatesVar States;
     public UI::Image Volume;
     public UI::Image Health;
     public TMP::TMP_Text StateText;
-
     public AudioDetection audioDetector;
 
     private Game _currentGame;
-    private int _currentStateIdx;
     private Inputs _inputs;
 
     void Start() {
         _inputs = new Inputs();
         _inputs.Enable();
 
-        _currentGame = Game.FromSettings(Settings, States, Time.time);
+        _currentGame = Game.FromSettings(Settings, States.Value, Time.time);
         Volume.transform.localScale = new Vector3(1f, 0.5f, 1f);
         Health.transform.localScale = new Vector3(1f, 0.5f, 1f);
         NewState(_currentGame.CurrentState);
@@ -80,16 +78,8 @@ public class ManagerGame : MonoBehaviour {
     public float volumeExpAdjustmennt = 1.2f;
 
     private float GetVolumePercent () {
-        //if (_inputs._.Low.ReadValue<float>() != 0f) {
-        //    return 20f;
-        //} else if (_inputs._.Medium.ReadValue<float>() != 0f) {
-        //    return 50f;
-        //} else if (_inputs._.High.ReadValue<float>() != 0f) {
-        //    return 80f;
-        //}
-        // var target = audioDetector.FindVolume() * volumeMultiplier
         var target = Mathf.Pow(audioDetector.FindVolume(), volumeExpAdjustmennt) * volumeMultiplier;
         volumeCached = Mathf.Lerp(volumeCached, target, volumeSmoothing);
-        return volumeCached;
+        return Mathf.Clamp(volumeCached, 0, 100);
     }
 }
