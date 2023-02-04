@@ -6,20 +6,19 @@ using UI = UnityEngine.UI;
 
 public class ManagerGame : MonoBehaviour {
     public Settings Settings;
-    public States States;
+    public StatesVar States;
     public UI::Image Volume;
     public UI::Image Health;
     public TMP::TMP_Text StateText;
 
     private Game _currentGame;
-    private int _currentStateIdx;
     private Inputs _inputs;
 
     void Start() {
         _inputs = new Inputs();
         _inputs.Enable();
 
-        _currentGame = Game.FromSettings(Settings, States, Time.time);
+        _currentGame = Game.FromSettings(Settings, States.Value, Time.time);
         Volume.transform.localScale = new Vector3(1f, 0.5f, 1f);
         Health.transform.localScale = new Vector3(1f, 0.5f, 1f);
         NewState(_currentGame.CurrentState);

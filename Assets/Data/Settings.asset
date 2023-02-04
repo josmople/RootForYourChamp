@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3f10ad5a1ce6e94da785864fabc61bb, type: 3}
-  m_Name: States
+  m_Script: {fileID: 11500000, guid: 58cb916f1d3241b4aba32d574217be07, type: 3}
+  m_Name: Settings
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -21,18 +21,13 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: StateTargetVolumes
+    - Name: States
       Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[System.ValueTuple`2[[State, Assembly-CSharp],[System.Single,
-        mscorlib]], mscorlib]], mscorlib
+      Data: 0|System.Collections.Generic.List`1[[State, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 5
     - Name: 
-      Entry: 7
-      Data: System.ValueTuple`2[[State, Assembly-CSharp],[System.Single, mscorlib]],
-        mscorlib
-    - Name: Item1
       Entry: 7
       Data: 1|EndState, Assembly-CSharp
     - Name: Text
@@ -41,17 +36,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: Item2
-      Entry: 4
-      Data: 0
     - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: System.ValueTuple`2[[State, Assembly-CSharp],[System.Single, mscorlib]],
-        mscorlib
-    - Name: Item1
       Entry: 7
       Data: 2|FightingState, Assembly-CSharp
     - Name: Text
@@ -60,17 +45,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: Item2
-      Entry: 4
-      Data: 20
     - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: System.ValueTuple`2[[State, Assembly-CSharp],[System.Single, mscorlib]],
-        mscorlib
-    - Name: Item1
       Entry: 7
       Data: 3|FightingState, Assembly-CSharp
     - Name: Text
@@ -79,17 +54,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: Item2
-      Entry: 4
-      Data: 50
     - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: System.ValueTuple`2[[State, Assembly-CSharp],[System.Single, mscorlib]],
-        mscorlib
-    - Name: Item1
       Entry: 7
       Data: 4|FightingState, Assembly-CSharp
     - Name: Text
@@ -98,28 +63,12 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: Item2
-      Entry: 4
-      Data: 80
     - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: System.ValueTuple`2[[State, Assembly-CSharp],[System.Single, mscorlib]],
-        mscorlib
-    - Name: Item1
       Entry: 7
       Data: 5|EndState, Assembly-CSharp
     - Name: Text
       Entry: 1
       Data: Won!
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: Item2
-      Entry: 4
-      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -129,4 +78,10 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+  LengthSecs: 10
+  PollingIntervalSecs: 0.1
+  AccurateGainPercent: 1
+  TolerancePercent: 10
+  InaccurateCostPercent: 1
+  StartingHealthPercent: 50
   StartingIdx: 2

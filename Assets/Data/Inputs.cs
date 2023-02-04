@@ -53,6 +53,15 @@ public partial class @Inputs : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Confirm"",
+                    ""type"": ""Button"",
+                    ""id"": ""15287df1-13dd-4a2f-965f-872f4d57309d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -88,6 +97,39 @@ public partial class @Inputs : IInputActionCollection2, IDisposable
                     ""action"": ""Medium"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""27514f53-eba1-47ee-bdd7-f9c3d4df767c"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Confirm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bb40038a-2da5-4c51-9c66-aa2f58064885"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Confirm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6d980441-50c0-47d1-98e9-810481b8851e"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Confirm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -99,6 +141,7 @@ public partial class @Inputs : IInputActionCollection2, IDisposable
         m___Low = m__.FindAction("Low", throwIfNotFound: true);
         m___Medium = m__.FindAction("Medium", throwIfNotFound: true);
         m___High = m__.FindAction("High", throwIfNotFound: true);
+        m___Confirm = m__.FindAction("Confirm", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -161,6 +204,7 @@ public partial class @Inputs : IInputActionCollection2, IDisposable
     private readonly InputAction m___Low;
     private readonly InputAction m___Medium;
     private readonly InputAction m___High;
+    private readonly InputAction m___Confirm;
     public struct _Actions
     {
         private @Inputs m_Wrapper;
@@ -168,6 +212,7 @@ public partial class @Inputs : IInputActionCollection2, IDisposable
         public InputAction @Low => m_Wrapper.m___Low;
         public InputAction @Medium => m_Wrapper.m___Medium;
         public InputAction @High => m_Wrapper.m___High;
+        public InputAction @Confirm => m_Wrapper.m___Confirm;
         public InputActionMap Get() { return m_Wrapper.m__; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -186,6 +231,9 @@ public partial class @Inputs : IInputActionCollection2, IDisposable
                 @High.started -= m_Wrapper.m__ActionsCallbackInterface.OnHigh;
                 @High.performed -= m_Wrapper.m__ActionsCallbackInterface.OnHigh;
                 @High.canceled -= m_Wrapper.m__ActionsCallbackInterface.OnHigh;
+                @Confirm.started -= m_Wrapper.m__ActionsCallbackInterface.OnConfirm;
+                @Confirm.performed -= m_Wrapper.m__ActionsCallbackInterface.OnConfirm;
+                @Confirm.canceled -= m_Wrapper.m__ActionsCallbackInterface.OnConfirm;
             }
             m_Wrapper.m__ActionsCallbackInterface = instance;
             if (instance != null)
@@ -199,6 +247,9 @@ public partial class @Inputs : IInputActionCollection2, IDisposable
                 @High.started += instance.OnHigh;
                 @High.performed += instance.OnHigh;
                 @High.canceled += instance.OnHigh;
+                @Confirm.started += instance.OnConfirm;
+                @Confirm.performed += instance.OnConfirm;
+                @Confirm.canceled += instance.OnConfirm;
             }
         }
     }
@@ -208,5 +259,6 @@ public partial class @Inputs : IInputActionCollection2, IDisposable
         void OnLow(InputAction.CallbackContext context);
         void OnMedium(InputAction.CallbackContext context);
         void OnHigh(InputAction.CallbackContext context);
+        void OnConfirm(InputAction.CallbackContext context);
     }
 }
