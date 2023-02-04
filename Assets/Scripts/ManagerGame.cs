@@ -82,6 +82,6 @@ public class ManagerGame : MonoBehaviour {
         //    return 80f;
         //}
 
-        return audioDetector.FindVolume();
+        return audioDetector.FindVolume() * 100;
     }
 }
