@@ -10,6 +10,7 @@ public class ManagerGame : MonoBehaviour {
     public UI::Image Volume;
     public UI::Image Health;
     public TMP::TMP_Text StateText;
+    public Animator Animator;
     public AudioDetection audioDetector;
 
     private Game _currentGame;
@@ -67,6 +68,7 @@ public class ManagerGame : MonoBehaviour {
     private void NewState (State state) {
         StateText.text = state.Text;
         _currentGame.HealthPercent = Settings.StartingHealthPercent;
+        Animator.Play(state.Text);
 
         // Play animation
     }
