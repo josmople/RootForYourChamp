@@ -6,10 +6,13 @@ public abstract class State {
     public string Text;
 }
 
-public class FightingState : State {
-}
+public class FightingState : State { }
 
-public class EndState : State {
+public class EndState : State { }
+
+public class States  {
+    public int StartingIdx;
+    public List<(State, float)> StateTargetVolumes;
 }
 
 
