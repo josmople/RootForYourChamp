@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 272593854}
   - component: {fileID: 272593856}
   - component: {fileID: 272593855}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Volume BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 480073794}
   - component: {fileID: 480073793}
   - component: {fileID: 480073792}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: HUD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -548,7 +548,7 @@ GameObject:
   - component: {fileID: 546022799}
   - component: {fileID: 546022802}
   - component: {fileID: 546022801}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -708,7 +708,7 @@ GameObject:
   - component: {fileID: 661896868}
   - component: {fileID: 661896870}
   - component: {fileID: 661896869}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Volume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -956,7 +956,7 @@ GameObject:
   - component: {fileID: 1232455433}
   - component: {fileID: 1232455435}
   - component: {fileID: 1232455434}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: StateText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1204,7 +1204,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1667958741}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1238,7 +1238,7 @@ GameObject:
   - component: {fileID: 1978370426}
   - component: {fileID: 1978370428}
   - component: {fileID: 1978370427}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Instruction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1373,7 +1373,7 @@ GameObject:
   - component: {fileID: 2020372464}
   - component: {fileID: 2020372466}
   - component: {fileID: 2020372465}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Instruction BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -35,10 +35,6 @@ public class CrowdCheering : MonoBehaviour
     {
         waveData = detector.GetAudioWaveFromMic();
 
-        float maxVolume = detector.GetAbsAudioWaveFromMic().Max();
-
-        Color c = new Color(maxVolume,0, (1f - maxVolume));
-
         int[] random_i = Enumerable.Range(0, waveData.Length).OrderBy(x => Random.Range(-1, 1)).ToArray();
         for (int i = 0; i < waveData.Length; i++)
         {
@@ -48,8 +44,6 @@ public class CrowdCheering : MonoBehaviour
             Vector3 position = input * vibrateOffset ;
 
             var targetPosition = transform.position + crowdOffset * i + position;
-
-            
 
             crowd[i].transform.position = Vector3.Lerp(crowd[i].transform.position, targetPosition, speed * Time.deltaTime);
         }
