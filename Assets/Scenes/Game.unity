@@ -658,21 +658,12 @@ MonoBehaviour:
   Volume: {fileID: 661896869}
   Health: {fileID: 834985472}
   StateText: {fileID: 1232455434}
-<<<<<<< HEAD
   Animator: {fileID: 1791814719}
-  audioDetector: {fileID: 379443863}
-  volumeSmoothing: 0.01
-=======
-<<<<<<< HEAD
   audioDetector: {fileID: 379443863}
   volumeSmoothing: 0.01
   volumeCached: 100
   volumeMultiplier: 15
   volumeExpAdjustmennt: 1.05
-=======
-  audioDetector: {fileID: 902787422}
-  volumeSmoothing: 0.03
->>>>>>> dev
   volumeCached: 100
   volumeMultiplier: 15
   volumeExpAdjustmennt: 1.05
@@ -785,7 +776,6 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-<<<<<<< HEAD
   m_Sprite: {fileID: 21300000, guid: c18a6c707e15c284eb39dafa6a389e93, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -797,18 +787,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-=======
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &979824244
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 979824240}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
->>>>>>> bdd7d902b808e624fad32e2014accb86359ea9df
->>>>>>> dev
 --- !u!1 &986428813
 GameObject:
   m_ObjectHideFlags: 0
