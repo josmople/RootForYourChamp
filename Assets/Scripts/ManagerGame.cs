@@ -6,6 +6,7 @@ using TMP = TMPro;
 using UI = UnityEngine.UI;
 
 public class ManagerGame : MonoBehaviour {
+    public ManagerSound SoundManager;
     public Settings Settings;
     public StatesVar States;
     public UI::Image Volume;
@@ -13,6 +14,9 @@ public class ManagerGame : MonoBehaviour {
     public TMP::TMP_Text StateText;
     public Animator Animator;
     public AudioDetection audioDetector;
+    public AudioClip MusicSound;
+    public AudioClip CrowdSound;
+    public List<AudioClip> BackgroundSounds;
 
     private Game _currentGame;
     private Inputs _inputs;
@@ -33,6 +37,8 @@ public class ManagerGame : MonoBehaviour {
         Volume.transform.localScale = new Vector3(1f, 0.5f, 1f);
         Health.transform.localScale = new Vector3(1f, 0.5f, 1f);
         NewState(_currentGame.CurrentState);
+        SoundManager.PlayMusic(MusicSound);
+        SoundManager.PlayCrowd(CrowdSound);
     }
 
     void Update() {
