@@ -11,6 +11,8 @@ public class Settings : Odin::SerializedScriptableObject {
     public float TolerancePercent;
     public float InaccurateCostPercent;
     public float StartingHealthPercent;
+    public float MusicMaxVolume;
+    public float SoundMaxVolume;
     public int StartingIdx;
     public List<State> States;
 }

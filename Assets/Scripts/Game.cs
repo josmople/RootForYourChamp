@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class State {
     public string Text;
+    public AudioClip Audience;
 }
 
 public class FightingState : State { }
