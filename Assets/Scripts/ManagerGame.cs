@@ -18,6 +18,9 @@ public class ManagerGame : MonoBehaviour {
     public AudioClip CrowdSound;
     public List<AudioClip> BackgroundSounds;
 
+    public ResizingUI hpBar;
+    public ResizingUI volumeBar;
+
     private Game _currentGame;
     private Inputs _inputs;
 
@@ -77,8 +80,10 @@ public class ManagerGame : MonoBehaviour {
             }
 
             _currentGame.LastPolledTimeSecs = Time.time;
-            Volume.transform.localScale = new Vector3(1f, volume / 100f, 1f);
-            Health.transform.localScale = new Vector3(_currentGame.HealthPercent / 100f, 1f, 1f);
+            volumeBar.interpolation = volume / 100f;
+            //Volume.transform.localScale = new Vector3(1f, volume / 100f, 1f);
+            hpBar.interpolation = _currentGame.HealthPercent / 100f;
+            //Health.transform.localScale = new Vector3(_currentGame.HealthPercent / 100f, 1f, 1f);
         }
     }
 
