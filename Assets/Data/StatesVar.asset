@@ -26,14 +26,109 @@ MonoBehaviour:
       Data: 0|States, Assembly-CSharp
     - Name: StartingIdx
       Entry: 3
-      Data: 0
+      Data: 2
     - Name: StateTargetVolumes
       Entry: 7
       Data: 1|System.Collections.Generic.List`1[[System.ValueTuple`2[[State, Assembly-CSharp],[System.Single,
         mscorlib]], mscorlib]], mscorlib
     - Name: 
       Entry: 12
+      Data: 5
+    - Name: 
+      Entry: 7
+      Data: System.ValueTuple`2[[State, Assembly-CSharp],[System.Single, mscorlib]],
+        mscorlib
+    - Name: Item1
+      Entry: 7
+      Data: 2|EndState, Assembly-CSharp
+    - Name: Text
+      Entry: 1
+      Data: Lost!
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Item2
+      Entry: 4
       Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: System.ValueTuple`2[[State, Assembly-CSharp],[System.Single, mscorlib]],
+        mscorlib
+    - Name: Item1
+      Entry: 7
+      Data: 3|FightingState, Assembly-CSharp
+    - Name: Text
+      Entry: 1
+      Data: Losing
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Item2
+      Entry: 4
+      Data: 20
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: System.ValueTuple`2[[State, Assembly-CSharp],[System.Single, mscorlib]],
+        mscorlib
+    - Name: Item1
+      Entry: 7
+      Data: 4|FightingState, Assembly-CSharp
+    - Name: Text
+      Entry: 1
+      Data: OK
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Item2
+      Entry: 4
+      Data: 50
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: System.ValueTuple`2[[State, Assembly-CSharp],[System.Single, mscorlib]],
+        mscorlib
+    - Name: Item1
+      Entry: 7
+      Data: 5|FightingState, Assembly-CSharp
+    - Name: Text
+      Entry: 1
+      Data: Winning
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Item2
+      Entry: 4
+      Data: 80
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: System.ValueTuple`2[[State, Assembly-CSharp],[System.Single, mscorlib]],
+        mscorlib
+    - Name: Item1
+      Entry: 7
+      Data: 6|EndState, Assembly-CSharp
+    - Name: Text
+      Entry: 1
+      Data: Won!
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Item2
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -44,5 +139,5 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: initialValue
-      Entry: 6
-      Data: 
+      Entry: 9
+      Data: 0
