@@ -31,6 +31,7 @@ public class ManagerGame : MonoBehaviour {
 
         _currentGame = Game.FromSettings(Settings, states, Time.time);
         Volume.transform.localScale = new Vector3(1f, 0.5f, 1f);
+        
         Health.transform.localScale = new Vector3(1f, 0.5f, 1f);
         NewState(_currentGame.CurrentState);
     }
@@ -44,6 +45,7 @@ public class ManagerGame : MonoBehaviour {
             var volume = GetVolumePercent();
             if (lowTarget <= volume && volume <= highTarget) {
                 _currentGame.HealthPercent += Settings.AccurateGainPercent;
+                
             } else {
                 _currentGame.HealthPercent -= Settings.InaccurateCostPercent;
             }
@@ -70,7 +72,7 @@ public class ManagerGame : MonoBehaviour {
 
             _currentGame.LastPolledTimeSecs = Time.time;
             Volume.transform.localScale = new Vector3(1f, volume / 100f, 1f);
-            Health.transform.localScale = new Vector3(1f, _currentGame.HealthPercent / 100f, 1f);
+            Health.transform.localScale = new Vector3(_currentGame.HealthPercent / 100f, 1f, 1f);
         }
     }
 
