@@ -43,7 +43,7 @@ public class ManagerSound : MonoBehaviour {
         CurrentCrowd.loop = true;
         CurrentCrowd.clip = audioClip;
         CurrentCrowd.spatialBlend = 0f;
-        CurrentCrowd.volume = Settings.MusicMaxVolume;
+        CurrentCrowd.volume = Settings.SoundMaxVolume;
         CurrentCrowd.gameObject.name = audioClip.name;
 
         var tween = DOTween.Sequence();

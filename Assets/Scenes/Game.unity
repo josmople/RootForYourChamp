@@ -812,7 +812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcfce8717e0dfd24d8370e89a8f5ce55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SoundManager: {fileID: 0}
+  SoundManager: {fileID: 1611133776}
   Settings: {fileID: 11400000, guid: af6edce220147c041a633fd5a0a8f973, type: 2}
   States: {fileID: 11400000, guid: 9133c2cb16e87f94ebec82a71f881fbd, type: 2}
   Volume: {fileID: 2130607605}
@@ -820,8 +820,8 @@ MonoBehaviour:
   StateText: {fileID: 1232455434}
   Animator: {fileID: 1791814719}
   audioDetector: {fileID: 379443863}
-  MusicSound: {fileID: 0}
-  CrowdSound: {fileID: 0}
+  MusicSound: {fileID: 8300000, guid: c0be1ee1923eec248b503aa05c8dd457, type: 3}
+  CrowdSound: {fileID: 8300000, guid: 13b4ecdaf052bba49aa5a920e158b482, type: 3}
   BackgroundSounds: []
   volumeSmoothing: 0.01
   volumeCached: 100
