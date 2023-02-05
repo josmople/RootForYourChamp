@@ -35,7 +35,7 @@ public class ManagerGame : MonoBehaviour {
             var volume = GetVolumePercent();
             if (lowTarget <= volume && volume <= highTarget) {
                 _currentGame.HealthPercent += Settings.AccurateGainPercent;
-                Volume.Image.tint = Color.green;
+                
             } else {
                 _currentGame.HealthPercent -= Settings.InaccurateCostPercent;
             }
