@@ -53,8 +53,6 @@ public class ManualCrowdCheering : MonoBehaviour
             var current = crowd[crowdIndex];
             var waveIndex = computeWaveIndex(crowdIndex, initialPositions.Count, waveData.Length);
 
-            Debug.Log(waveIndex);
-
             var volume = waveData[waveIndex];
             var offset = volume * vibrateOffset;
 
