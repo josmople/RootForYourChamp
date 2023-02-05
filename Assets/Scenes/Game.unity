@@ -554,13 +554,6 @@ MonoBehaviour:
   Volume: {fileID: 661896869}
   Health: {fileID: 834985472}
   StateText: {fileID: 1232455434}
-<<<<<<< HEAD
-  audioDetector: {fileID: 379443863}
-  volumeSmoothing: 0.01
-  volumeCached: 100
-  volumeMultiplier: 15
-  volumeExpAdjustmennt: 1.05
-=======
   audioDetector: {fileID: 902787422}
   volumeSmoothing: 0.03
   volumeCached: 100
@@ -677,7 +670,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 979824240}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
->>>>>>> bdd7d902b808e624fad32e2014accb86359ea9df
 --- !u!1 &986428813
 GameObject:
   m_ObjectHideFlags: 0
