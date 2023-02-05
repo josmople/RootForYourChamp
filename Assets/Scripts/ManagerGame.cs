@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using TMP = TMPro;
 using UI = UnityEngine.UI;
@@ -20,7 +21,15 @@ public class ManagerGame : MonoBehaviour {
         _inputs = new Inputs();
         _inputs.Enable();
 
-        _currentGame = Game.FromSettings(Settings, States.Value, Time.time);
+        var states = States.Value ?? new States {
+            StartingIdx = 2,
+            // When skipping calibration during testing
+            StateTargetVolumes = Settings.States
+                .Select(state => (state, Random.Range(0f, 100f)))
+                .ToList(),
+        };
+
+        _currentGame = Game.FromSettings(Settings, states, Time.time);
         Volume.transform.localScale = new Vector3(1f, 0.5f, 1f);
         
         Health.transform.localScale = new Vector3(1f, 0.5f, 1f);
@@ -71,8 +80,6 @@ public class ManagerGame : MonoBehaviour {
         StateText.text = state.Text;
         _currentGame.HealthPercent = Settings.StartingHealthPercent;
         Animator.Play(state.Text);
-
-        // Play animation
     }
 
 
@@ -82,6 +89,14 @@ public class ManagerGame : MonoBehaviour {
     public float volumeExpAdjustmennt = 1.2f;
 
     private float GetVolumePercent () {
+        if (_inputs._.Low.ReadValue<float>() != 0f) {
+            return 20f;
+        } else if (_inputs._.Medium.ReadValue<float>() != 0f) {
+            return 50f;
+        } else if (_inputs._.High.ReadValue<float>() != 0f) {
+            return 80f;
+        }
+
         var target = Mathf.Pow(audioDetector.FindVolume(), volumeExpAdjustmennt) * volumeMultiplier;
         volumeCached = Mathf.Lerp(volumeCached, target, volumeSmoothing);
         return Mathf.Clamp(volumeCached, 0, 100);
