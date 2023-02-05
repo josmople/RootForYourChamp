@@ -82,6 +82,6 @@ MonoBehaviour:
   PollingIntervalSecs: 0.01
   AccurateGainPercent: 1
   TolerancePercent: 10
-  InaccurateCostPercent: 0.1
+  InaccurateCostPercent: 0.5
   StartingHealthPercent: 50
   StartingIdx: 2
