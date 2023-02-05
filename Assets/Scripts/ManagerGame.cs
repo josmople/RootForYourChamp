@@ -22,6 +22,7 @@ public class ManagerGame : MonoBehaviour {
 
         _currentGame = Game.FromSettings(Settings, States.Value, Time.time);
         Volume.transform.localScale = new Vector3(1f, 0.5f, 1f);
+        
         Health.transform.localScale = new Vector3(1f, 0.5f, 1f);
         NewState(_currentGame.CurrentState);
     }
