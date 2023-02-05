@@ -33,6 +33,9 @@ MonoBehaviour:
     - Name: Text
       Entry: 1
       Data: Lost!
+    - Name: Audience
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -42,6 +45,9 @@ MonoBehaviour:
     - Name: Text
       Entry: 1
       Data: Losing
+    - Name: Audience
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -51,6 +57,9 @@ MonoBehaviour:
     - Name: Text
       Entry: 1
       Data: OK
+    - Name: Audience
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -60,6 +69,9 @@ MonoBehaviour:
     - Name: Text
       Entry: 1
       Data: Winning
+    - Name: Audience
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -69,6 +81,9 @@ MonoBehaviour:
     - Name: Text
       Entry: 1
       Data: Won!
+    - Name: Audience
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -84,4 +99,6 @@ MonoBehaviour:
   TolerancePercent: 10
   InaccurateCostPercent: 0.5
   StartingHealthPercent: 50
+  MusicMaxVolume: 1
+  SoundMaxVolume: 1
   StartingIdx: 2
