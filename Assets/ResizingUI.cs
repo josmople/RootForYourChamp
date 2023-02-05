@@ -36,6 +36,8 @@ public class ResizingUI : MonoBehaviour
 
         this.rectangle.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, target_width);
         this.rectangle.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, target_height);
+
+        
     }
 
 }
