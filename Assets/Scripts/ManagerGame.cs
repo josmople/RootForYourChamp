@@ -21,6 +21,11 @@ public class ManagerGame : MonoBehaviour {
     public ResizingUI hpBar;
     public ResizingUI volumeBar;
 
+    public GameObject humanWin;
+    public GameObject robotWin;
+    public GameObject quit;
+    
+
     private Game _currentGame;
     private Inputs _inputs;
 
@@ -43,6 +48,10 @@ public class ManagerGame : MonoBehaviour {
         NewState(_currentGame.CurrentState);
         SoundManager.PlayMusic(MusicSound);
         SoundManager.PlayCrowd(CrowdSound);
+
+        humanWin.SetActive(false);
+        robotWin.SetActive(false);
+        quit.SetActive(false);
     }
 
     void Update() {
@@ -63,7 +72,8 @@ public class ManagerGame : MonoBehaviour {
                 _currentGame.CurrentStateIdx--;
 
                 if (_currentGame.CurrentState is EndState) {
-                    //
+                    robotWin.SetActive(true);
+                    quit.SetActive(true);
                 }
 
                 NewState(_currentGame.CurrentState);
@@ -73,7 +83,8 @@ public class ManagerGame : MonoBehaviour {
                 _currentGame.CurrentStateIdx++;
 
                 if (_currentGame.CurrentState is EndState) {
-                    //
+                    humanWin.SetActive(true);
+                    quit.SetActive(true);
                 }
 
                 NewState(_currentGame.CurrentState);
